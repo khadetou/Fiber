@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  background-color: $primaryColor;
+
+  &__headerContent {
+    max-width: 1270px;
+    margin: auto;
+    height: 152px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logoText {
+    font-size: 29px;
+  }
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__ul {
+    display: flex;
+    margin: auto;
+    width: 248px;
+    justify-content: space-around;
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+  }
+  &__signIn {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  &__signUp {
+    background: $secondaryColor;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 22px;
+    margin-left: 49px;
+    padding: 20px 30px;
+  }
+}
