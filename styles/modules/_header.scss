@@ -5,46 +5,114 @@
   &__headerContent {
     max-width: 1270px;
     margin: auto;
-    height: 152px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
+
+    @include respon(fromMedium) {
+      height: 128px;
+    }
   }
 
   &__logo {
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   &__logoText {
-    font-size: 29px;
+    font-size: 17px;
+
+    @include respon(fromSmall) {
+      font-size: 24px;
+    }
   }
 
   &__navigation {
     display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 68px;
+    left: 30px;
+    top: 89px;
+
+    @include respon(fromMedium) {
+      opacity: 1;
+      position: static;
+    }
   }
 
   &__ul {
     display: flex;
     margin: auto;
-    width: 248px;
+    flex-direction: column;
+    width: 280px;
     justify-content: space-around;
+
+    @include respon(fromMedium) {
+      flex-direction: row;
+    }
   }
+
+  &__li {
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-size: 16px;
+
+    @include respon(atMedium) {
+      font-size: 16px;
+    }
+  }
+
+  &__li:hover {
+    background-color: $secondaryColor;
+    transform: scale(1.1);
+    border-radius: 5px;
+
+    a {
+      color: #fff;
+    }
+  }
+
   &__auth {
-    display: flex;
     align-items: center;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 223px;
+    left: 41px;
+
+    @include respon(fromMedium) {
+      opacity: 1;
+      position: static;
+    }
   }
   &__signIn {
     font-weight: 700;
     font-size: 22px;
+    cursor: pointer;
   }
   &__signUp {
     background: $secondaryColor;
     color: #fff;
     border-radius: 5px;
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 20px;
     margin-left: 49px;
-    padding: 20px 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: block;
+    margin: auto 0;
+    font-size: 25px;
+
+    @include respon(fromMedium) {
+      display: none;
+      font-size: 39px;
+    }
   }
 }
